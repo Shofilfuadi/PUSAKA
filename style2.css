@@ -1,0 +1,240 @@
+:root {
+  --primary: #f48c06;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0070c0;
+  color: white;
+  min-height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #002b6a;
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.navbar .navbar-logo .logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* crop jadi bulat */
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-size: 1.7rem;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Dashboard Section */
+.dashboard {
+  padding: 6rem 7% 1.4rem; /* Padding untuk dashboard */
+  text-align: center; /* Rata tengah untuk teks */
+}
+
+.dashboard h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.dashboard p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Latar belakang semi-transparan */
+  border-radius: 10px;
+  padding: 2rem;
+  width: 30%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+}
+
+.graphs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.graph-item {
+  flex: 1 1 30%; /* Adjust the width as needed */
+  margin: 1rem; /* Space between items */
+}
+.graph-item .w-full {
+  width: 200px; /* Set width to 200 pixels */
+  height: 100px; /* Set height to 100 pixels */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  margin: 0.5rem; /* Add margin for spacing between images */
+}
+/* Footer */
+.custom-footer {
+  background-color: #002b6a;
+  color: #fff;
+  padding: 2rem 7%;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left .footer-logo {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.footer-left p,
+.footer-left a {
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--bg);
+}
+
+/*media queries*/
+/*laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/*tablet*/
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+}

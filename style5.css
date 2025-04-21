@@ -1,0 +1,267 @@
+:root {
+  --primary: #f48c06;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0070c0;
+  color: white;
+  min-height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #002b6a;
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.navbar .navbar-logo .logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* crop jadi bulat */
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-size: 1.7rem;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Bagian Content & Section */
+
+.section {
+  padding-top: 8rem; /* atau 80px */
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-bottom: 3rem;
+  background-color: #0070c0;
+  color: white;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Download List */
+.download-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.download-list li {
+  margin-bottom: 0.5rem;
+}
+
+.download-list a {
+  color: var(--text-color);
+  transition: color 0.3s;
+  font-size: 1.05rem;
+}
+
+.download-list a:hover {
+  color: var(--primary);
+}
+
+/* SPJ Gallery */
+.spj-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.spj-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  max-height: 200px; /* batasi tinggi maksimum */
+}
+.accordion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #003580;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.accordion-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle.active i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 0.5rem;
+}
+
+.accordion-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.custom-footer {
+  background-color: #002b6a;
+  color: #fff;
+  padding: 2rem 7%;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left .footer-logo {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.footer-left p,
+.footer-left a {
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--bg);
+}
+/*media queries*/
+/*laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/*tablet*/
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+}
